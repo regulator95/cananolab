@@ -1,0 +1,13 @@
+version: '2'
+services:
+  canano-wildfly:
+    container_name: canano-wildfly
+    build: .
+    ports:
+     - "8080:8080"
+     - "9990:9990"
+     - "19990:19990"
+    environment:
+     nano_db: $nano_db
+     nano_user: $nano_user
+     nano_password: $nano_password       
